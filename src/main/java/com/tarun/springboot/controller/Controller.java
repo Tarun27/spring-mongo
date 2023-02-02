@@ -12,6 +12,11 @@ public class Controller {
     @Autowired
     SpringbootService springbootService;
 
+    @GetMapping("/")
+    public String home(){
+        return "welcome";
+    }
+
     @GetMapping("/search")
    public String webSearch(){
         return springbootService.webSearch();
