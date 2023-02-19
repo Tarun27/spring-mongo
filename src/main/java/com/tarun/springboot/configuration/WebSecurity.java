@@ -1,5 +1,6 @@
 package com.tarun.springboot.configuration;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,10 +16,15 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class WebSecurity {
 
+    @Value("${spring.user.username}")
+    private String username;
+
+    @Value("${spring.user.password}")
+    private String password;
     @Bean
     public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
-        UserDetails user = User.withUsername("user")
-                .password(passwordEncoder.encode("password"))
+        UserDetails user = User.withUsername(username)
+                .password(passwordEncoder.encode(password))
                 .roles("USER")
                 .build();
 
