@@ -1,0 +1,11 @@
+spring:
+  user:
+    username: user
+    password: password
+  rapidAPI:
+    url: https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=taylor&pageNumber=1&pageSize=10&autoCorrect=true
+    headers:
+      key: X-RapidAPI-Key
+      key-val: 58bf538e1bmsh1f2969d21935a20p1e9720jsna7dd7817bac5
+      host: X-RapidAPI-Host
+      host-val: contextualwebsearch-websearch-v1.p.rapidapi.com
