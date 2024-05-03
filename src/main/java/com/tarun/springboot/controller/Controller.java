@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import java.io.IOException;
+import java.util.Map;
 
 @RestController
 @Slf4j
@@ -25,6 +26,11 @@ public class Controller {
     @GetMapping("/search")
    public SearchResp webSearch(){
         return springbootService.webSearch();
+    }
+
+    @GetMapping("/streamingCountries")
+     public Map<String, Object> streamingCountries() throws IOException {
+         return springbootService.streamingCountries();
     }
 
 }

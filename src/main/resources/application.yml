@@ -1,7 +1,7 @@
 spring:
   user:
-    username: user
-    password: password
+    username: tarun
+    password: pass
   rapidAPI:
     url: https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=taylor&pageNumber=1&pageSize=10&autoCorrect=true
     headers:
